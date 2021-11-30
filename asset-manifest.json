@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/coingeckoclient/static/css/main.de584ca3.chunk.css",
+    "main.js": "/coingeckoclient/static/js/main.b1cad862.chunk.js",
+    "main.js.map": "/coingeckoclient/static/js/main.b1cad862.chunk.js.map",
+    "runtime-main.js": "/coingeckoclient/static/js/runtime-main.590fc570.js",
+    "runtime-main.js.map": "/coingeckoclient/static/js/runtime-main.590fc570.js.map",
+    "static/js/2.67fd1e6a.chunk.js": "/coingeckoclient/static/js/2.67fd1e6a.chunk.js",
+    "static/js/2.67fd1e6a.chunk.js.map": "/coingeckoclient/static/js/2.67fd1e6a.chunk.js.map",
+    "index.html": "/coingeckoclient/index.html",
+    "static/css/main.de584ca3.chunk.css.map": "/coingeckoclient/static/css/main.de584ca3.chunk.css.map",
+    "static/js/2.67fd1e6a.chunk.js.LICENSE.txt": "/coingeckoclient/static/js/2.67fd1e6a.chunk.js.LICENSE.txt",
+    "static/media/scrooge.d296bfeb.png": "/coingeckoclient/static/media/scrooge.d296bfeb.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.590fc570.js",
+    "static/js/2.67fd1e6a.chunk.js",
+    "static/css/main.de584ca3.chunk.css",
+    "static/js/main.b1cad862.chunk.js"
+  ]
+}
