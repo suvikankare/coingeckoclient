@@ -32,10 +32,17 @@
   text-align: center;
 }
 
-h2, 
-h3 {
+.boxFullWidth {
+  grid-column: 1 / span 2;
+}
+
+.redText {
   color: #AF3E4D;
   letter-spacing: 2px;
+  font-weight: bold;
+  display: block;
+  margin: 1em 0;
+  font-size: 1.5em;
 }
 
 @media (min-width: 500px) {
@@ -51,7 +58,17 @@ input[type="text"] {
 }
 
 button[type="submit"] {
-  padding: 5px 15px;
+  background-color: #fff;
+  border: 0;
+  margin-top: 0.5em;
+  padding: 0.5em 2em;
+  border: 2px solid #fff;
+  transition: all .2s;
+}
+
+button[type="submit"]:hover {
+  background-color: #AF3E4D;
+  color: #fff;
 }
 
 .footer-img {

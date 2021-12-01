@@ -19,20 +19,24 @@ const Display = ({ bitcoin }) => {
   return (
     <div className="box-container">
       <div className="box">
-        <h2>{volumeDate}</h2> was the highest trading volume of <h3><NumberFormat value={largestVolume[1]} displayType={'text'} thousandSeparator={' '} suffix={'€'} decimalScale={2} /></h3>
+        <p><span className="redText">{volumeDate}</span> was the highest trading volume of <span className="redText"><NumberFormat value={largestVolume[1]} displayType={'text'} thousandSeparator={' '} suffix={'€'} decimalScale={2} /></span></p>
       </div>
 
       <div className="box">
-        The price decreased <h2>{downwardDays}</h2> days in a row for the inputs from <h3>{downwardFrom}</h3> and to <h3>{downwardTo}</h3>
+        <p>The price decreased <span className="redText">{downwardDays}</span> days in a row for the inputs from <span className="redText">{downwardFrom}</span> and to <span className="redText">{downwardTo}</span></p>
       </div>
 
       {maxProfit > 0 ? (
-        <div className="box">
-          <p>Best day to buy {buydayFormatted} at price <NumberFormat value={buyPrice} displayType={'text'} thousandSeparator={' '} suffix={'€'} decimalScale={2} /></p>
-          <p>Best day to sell {selldayFormatted} at price <NumberFormat value={sellPrice} displayType={'text'} thousandSeparator={' '} suffix={'€'} decimalScale={2} /></p>
-        </div>
+        <>
+          <div className="box">
+            <p>Best day to buy <span className="redText">{buydayFormatted}</span> at price <span className="redText"><NumberFormat value={buyPrice} displayType={'text'} thousandSeparator={' '} suffix={'€'} decimalScale={2} /></span></p>
+          </div>
+          <div className="box">
+            <p>Best day to sell <span className="redText">{selldayFormatted}</span> at price <span className="redText"><NumberFormat value={sellPrice} displayType={'text'} thousandSeparator={' '} suffix={'€'} decimalScale={2} /></span></p>
+          </div>
+        </>
       ) : (
-        <div className="box">
+        <div className="box boxFullWidth">
           <p>Best thing to do in this timeframe is to sit back, relax and wait.</p>
         </div>
       )}

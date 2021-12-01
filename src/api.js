@@ -9,5 +9,3 @@ export const fetchMarketChartRangeFunction = async (from, to) => {
   });
   return data;
 }
-
-export default { fetchMarketChartRangeFunction };

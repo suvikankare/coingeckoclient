@@ -10,22 +10,22 @@ export const sorted = (bitcoin) => {
   bitcoin && bitcoin.prices.forEach((b, i) => {
     if (i === 0) return;
     const [, price] = b;
-    const [previousDay, previousPrice] = bitcoin.prices[i - 1]
+    const [previousDay, previousPrice] = bitcoin.prices[i - 1];
     // if today's price is lower than yesterday, push to trend-array
     if (price < previousPrice) trend.push({ previousDay, previousPrice })
     // if not, stop previous step and push trend-array to totaltrends-array
     else {
       if (trend.length > 0) {
-        trend.push({ previousDay, previousPrice })
+        trend.push({ previousDay, previousPrice });
         totaltrends.push(trend);
       }
-      trend = []
+      trend = [];
     }
   });
 
   // find longest array from totaltrends = longest downward trend
   const sorted = totaltrends.sort((a, b) => {
-    return b.length - a.length
+    return b.length - a.length;
   });
 
   const downwardDays = sorted[0].length;
