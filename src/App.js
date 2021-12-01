@@ -5,7 +5,7 @@ import { DateTime } from 'luxon';
 import Display from './Display';
 import scrooge from './scrooge.png';
 import Datepicker from "react-datepicker";
-import { formatISO, addDays } from 'date-fns';
+import { formatISO, addDays, subDays } from 'date-fns';
 import "react-datepicker/dist/react-datepicker.css";
 
 const App = () => {
@@ -26,14 +26,14 @@ const App = () => {
       <h1>Scrooge McDuck's CoinGeckoClient</h1>
       <div className="container">
         <div className="form">
-          <p>Place the dates you want information from. Date range minimum 91 days.</p>
+          <p>Place the dates you want information from. Date range minimum 91 days and maximum 365 days.</p>
           <form onSubmit={handleSubmit}>
             <div className="form-inputs">
               <div className="form-inputs__input">
-                <Datepicker selected={fromCalendarDate} dateFormat="yyyy-MM-dd" selectsStart startDate={fromCalendarDate} endDate={toCalendarDate} onChange={(date) => { setFromCalendarDate(date) }} />
+                <Datepicker selected={fromCalendarDate} dateFormat="yyyy-MM-dd" selectsStart startDate={fromCalendarDate} endDate={toCalendarDate} minDate={subDays(toCalendarDate, 365)} onChange={(date) => { setFromCalendarDate(date) }} />
               </div>
               <div className="form-inputs__input">
-                <Datepicker selected={toCalendarDate} dateFormat="yyyy-MM-dd" selectsEnd startDate={fromCalendarDate} endDate={toCalendarDate} minDate={addDays(fromCalendarDate, 91)} onChange={(date) => setToCalendarDate(date)} />
+                <Datepicker selected={toCalendarDate} dateFormat="yyyy-MM-dd" selectsEnd startDate={fromCalendarDate} endDate={toCalendarDate} minDate={addDays(fromCalendarDate, 91)} maxDate={addDays(fromCalendarDate, 365)} onChange={(date) => setToCalendarDate(date)} />
               </div>
             </div>
             <button type="submit">Select days</button>
