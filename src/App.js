@@ -9,7 +9,7 @@ import { formatISO, addDays, subDays } from 'date-fns';
 import "react-datepicker/dist/react-datepicker.css";
 
 const App = () => {
-  const [fromCalendarDate, setFromCalendarDate] = useState(new Date('2021-01-01'));
+  const [fromCalendarDate, setFromCalendarDate] = useState(new Date('2022-10-12'));
   const [toCalendarDate, setToCalendarDate] = useState(new Date());
   const [bitcoin, setBitcoin] = useState();
 
